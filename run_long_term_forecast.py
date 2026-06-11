@@ -85,7 +85,7 @@ if __name__ == '__main__':
 
     all_results = []
 
-    for model in ['RNN', 'DLinear', 'Informer', 'Autoformer', 'iTransformer', 'TimesNet', 'PatchTST', 'TimeLLM', 'TimeLLMformer']:
+    for model in ['MultiAttLLM']:
 
         args = deepcopy(default_args)
         args.model_id = 'test'
@@ -98,6 +98,6 @@ if __name__ == '__main__':
         res_metrics_df.insert(0, 'model', model)
         all_results.append(res_metrics_df)
         final_metrics_df = pd.concat(all_results, axis=0, ignore_index=False)
-        final_metrics_df.to_csv('./results/ele_texas_all_models_comparison.csv')
+        final_metrics_df.to_csv('./results/ele_texas_performance.csv')
 
 

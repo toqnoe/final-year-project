@@ -1,7 +1,7 @@
 import os
 import torch
-from models import TimeLLM, TimesNet, DLinear, Informer, Transformer, iTransformer, RNN, PatchTST, MultiAttLLM
-
+from models import TimeLLM, TimesNet, Informer, Transformer, iTransformer, RNN, PatchTST, MultiAttLLM
+import models.DLinear as DLinear
 
 class Exp_Basic(object):
     def __init__(self, args):

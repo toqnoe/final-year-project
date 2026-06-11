@@ -10,6 +10,9 @@ def model_hyperparameter_setup(args):
     args.d_layers = 1
     if args.model == 'MultiAttLLM':
         args.learning_rate = 0.01
+        args.num_tokens = 2000
+        args.llm_finetune_layers = 0
+        args.feature_extractor_type = "linear"
 
         args.patience = 6
         args.lradj = 'PEMS'
